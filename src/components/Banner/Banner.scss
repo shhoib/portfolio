@@ -7,12 +7,43 @@
     background-color: var(--primary-color);
     padding-bottom: 2rem;
 
+    @include fold{
+        flex-direction: column;
+        padding-bottom: 8vh;
+    }
+    @include mobile{
+        flex-direction: column;
+        padding-bottom: 8vh;
+    }
+
 .textContainer{
     width: 40vw;
+
+    @include fold{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include mobile{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     h1{
         font-size: 9vh;
         margin: 2vh 0 2vh 0;
+
+        @include fold{
+          font-size: 5vh;
+          text-align: center;
+        }
+        @include mobile{
+          font-size: 5.5vh;
+          text-align: center;
+        }
 
         span{
             color: var(--accent-color);
@@ -21,10 +52,32 @@
     }
     h3{
         font-size: 4vh;
+
+        @include fold{
+         font-size: 2.7vh;
+         margin-top: 3rem;
+        }
+        @include mobile{
+         font-size: 3vh;
+         margin-top: 3rem;
+        }
     }
     h6{
         font-size: 2.4vh;
         font-weight: 100;
+
+        @include fold{
+         font-size: 1.9vh;
+         text-align: center;
+         padding: 0 .5rem;
+         font-weight: 200;
+        }
+        @include mobile{
+         font-size: 2vh;
+         text-align: center;
+         padding: 0 .5rem;
+         font-weight: 200;
+        }
     }
  button{
     background-color: var(--accent-color);
@@ -45,6 +98,13 @@
     width: 100%;
     margin-top: 2rem;
 
+    @include fold{
+        width: 80%;
+    }
+    @include mobile{
+        width: 80%;
+    }
+
     hr{
         width: 60%;
         height: 1px;
@@ -52,10 +112,26 @@
     a{
         color: black;
         font-size: 1.2rem;
+
+        @include fold{
+         margin-left: 1rem;
+        }
+        @include mobile{
+         margin-left: 1rem;
+        }
     }
     a:hover{
         color: var(--accent-color);
         transition: 1s;
+    }
+
+    h6{
+        @include fold{
+            font-size: 0.9rem;
+        }
+        @include mobile{
+            font-size: 0.9rem;
+        }
     }
  }
 }
@@ -63,6 +139,15 @@ img{
     width: 35vw;
     border-radius: 30% 50% 30% 70%;
     margin: 5vh 0 0 5vh;
+
+    @include fold{
+        width: 80vw;
+        margin-left: 0;
+    }
+    @include mobile{
+        width: 80vw;
+        margin-left: 0;
+    }
 }
 }
 
@@ -79,23 +164,63 @@ img{
         position: relative;
         bottom: 5vh;
         font-size: 1.2rem;
+
+        @include fold{
+            padding: 1.2rem 3.5rem;
+            font-size: 1rem;
+            bottom: 4vh;
+        }
+        @include mobile{
+            padding: 1.3rem 4rem;
+            font-size: 1rem;
+            bottom: 4vh;
+        }
     }
     h1{
         font-size: 2.3rem;
         font-weight: 900;
+
+        @include fold{
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 0 .7rem;
+        }
+        @include mobile{
+            font-size: 1.8rem;
+        }
     }
     h6{
         font-size: .9rem;
         font-weight: 200;
         padding: .8rem;
+
+        @include fold{
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 0 .6rem;
+            margin-top: 1rem;
+        }
+        @include mobile{
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 0 .6rem;
+            margin-top: 1rem;
+        }
     }
  .numberContainer{
     display: flex;
     gap: 2vw;
     text-align: center;
 
+    @include fold{
+        margin-top: 1.5rem;
+    }
+    @include mobile{
+        margin-top: 2rem;
+    }
+
     h1{
-        // text-shadow: 4px 4px 7px var(--accent-color);
+
         span{
             color: var(--accent-color);
             text-shadow: 3px 3px 6px rgb(133, 133, 133);
@@ -106,6 +231,13 @@ img{
         font-size: 1rem;
         font-weight: 900;
         margin-top: 0.3rem;
+
+        @include fold{
+            font-size: 0.7rem;
+        }
+        @include mobile{
+            font-size: 0.7rem;
+        }
     }
  } 
  
@@ -114,6 +246,15 @@ img{
     display: flex;
     gap: 5vw;
     margin-top: 7vh;
+
+    @include fold{
+        gap: 3vw;
+        margin-top: 5vh;
+    }
+    @include mobile{
+        gap: 3vw;
+        margin-top: 5vh;
+    }
 
 section{
     display: flex;
@@ -125,10 +266,26 @@ section{
         height: 8rem;
         background-size: cover;
         border-radius: 10px;
+
+        @include fold{
+            width: 4rem;
+            height: 4rem;
+        }
+        @include mobile{
+            width: 5rem;
+            height: 5rem;
+        }
     }
 
     h3{
         margin-top: 1.7vh;
+
+        @include fold{
+            font-size: .6rem;
+        }
+        @include mobile{
+            font-size: .8rem;
+        }
     }
  }
  }
@@ -144,6 +301,13 @@ section{
     text-align: center;
     padding-bottom: 15vh;
 
+    @include fold{
+        margin-top: 8vh;   
+    }
+    @include mobile{
+        margin-top: 8vh;   
+    }
+
 
     h3{
         background: black;
@@ -152,13 +316,30 @@ section{
         font-size: 1.2rem;
         position: relative;
         bottom: 5vh;
+
+        @include fold{
+            padding: 1.2rem 4.5rem;
+            font-size: 1rem;
+            bottom: 3vh;
+        }
+        @include mobile{
+            padding: 1.3rem 5rem;
+            font-size: 1rem;
+            bottom: 3vh;
+        }
     }
     h5{
         font-size: 1.4rem;
         font-weight: 500;
-        // margin-top: 50%;
         color: white;
         text-shadow: 3px 3px 6px black;
+
+        @include fold{
+            font-size: .8rem;
+        }
+        @include mobile{
+            font-size: 1.2rem;
+        }
     }
 
  .firstRow{
@@ -167,11 +348,25 @@ section{
     height: 45vh;
     margin-top: 5vh;
 
+    @include fold{
+        height: 17vh;
+    }
+    @include mobile{
+        height: 20vh;
+    }
+
     .project1{
         width: 40vw;
         border-radius: 12px;
         background-image: url('https://i.pinimg.com/236x/5c/6e/d7/5c6ed77f60a3962915531f29e633382b.jpg');
         background-size: cover;
+        
+        @include fold{
+            width: 50vw;
+        }
+        @include mobile{
+            width: 50vw;
+        }
 
         h5{
             text-shadow: 3px 3px 6px black;
@@ -182,6 +377,14 @@ section{
         border-radius: 12px;
         background-image: url('./IMG/tron.png');
         background-size: cover;
+
+        @include fold{
+         width: 35vw;   
+        }
+        @include mobile{
+         width: 35vw;   
+        }
+
         h5{
             text-shadow: 3px 3px 6px rgb(211, 211, 211);
         }
@@ -193,11 +396,25 @@ section{
     margin-top: 2vw;
     height: 35vh;
 
+    @include fold{
+        height: 13vh;
+    }
+    @include mobile{
+        height: 15vh;
+    }
+
     .project3{
         width: 33vw;
         border-radius: 12px;
         background-image: url('./IMG/coride.png');
         background-size: cover;
+
+        @include mobile{
+          width: 38vw;
+        }
+        @include fold{
+          width: 38vw;
+        }
     }
     .project4{
         width: 18vw;
@@ -205,6 +422,13 @@ section{
         background-image: url('./IMG/zoo.png');
         background-size: cover;
         background-position: -80px;
+
+        @include fold{
+         width: 23vw;
+        }
+        @include mobile{
+         width: 23vw;
+        }
 
         h5{
             text-shadow: 3px 3px 6px rgb(150, 150, 150);
@@ -215,7 +439,14 @@ section{
         border-radius: 12px;
         background-image: url('./IMG/catalyst.png');
         background-size: cover;
-        position: relative
+        position: relative;
+
+        @include fold{
+            width: 22vw;
+        }
+        @include mobile{
+            width: 22vw;
+        }
 
         h5{
             text-shadow: 3px 3px 6px rgb(212, 212, 212);
@@ -243,7 +474,7 @@ section{
     align-items: center;
     justify-content: center;
     padding-bottom: 8vh;
-
+    
     h3{
         background: black;
         padding: 1.5rem 10rem;
@@ -251,12 +482,35 @@ section{
         font-size: 1.2rem;
         position: relative;
         bottom: 5vh;
+        
+        @include fold{
+            padding: 1.1rem 4.5rem;
+        }
+        @include mobile{
+            padding: 1.3rem 5rem;
+        }
     }
     .about{
         display: flex;
+        
+            @include fold{
+                flex-direction: column;
+                align-items: center;
+            }
+            @include mobile{
+                flex-direction: column;
+                align-items: center;
+            }
 
     .iconsContainer{
         width: 60vw;
+
+        @include fold{
+         width: 95vw;
+        }
+        @include mobile{
+         width: 95vw;
+        }
 
     .first{
         display: flex;
@@ -270,6 +524,15 @@ section{
         border-radius: 50%;
         margin-right: 3.3vw;
         box-shadow: 3px 3px 8px rgb(92, 92, 92);
+
+        @include fold{
+         width: 40px;
+         height: 40px;
+        }
+        @include mobile{
+         width: 50px;
+         height: 50px;
+        }
     }
     }
     }
@@ -284,6 +547,7 @@ section{
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
+    padding-bottom: 1rem;
 
     h3{
         background: black;
@@ -292,6 +556,13 @@ section{
         font-size: 1.2rem;
         position: relative;
         bottom: 5vh;
+
+        @include fold{
+            padding: 1.2rem 3rem;
+        }
+        @include mobile{
+            padding: 1.3rem 4rem;
+        }
     }
     h2{
         margin-top: 2vh;
@@ -301,6 +572,15 @@ section{
         font-weight: 400;
         font-size: 1.3rem;
         text-shadow: 3px 3px 6px var(--accent-color);
+
+        @include fold{
+            width: 80vw;
+            font-size: 1rem;
+        }
+        @include mobile{
+            width: 80vw;
+            font-size: 1rem;
+        }
      }
     .icon{
         margin-right: 2vw;
