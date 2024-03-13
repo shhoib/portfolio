@@ -2,6 +2,10 @@ import './Banner.scss';
 import { GoArrowUpRight } from "react-icons/go";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaSquareGithub } from "react-icons/fa6";
+import Lottie from 'react-lottie';
+import about from '../../../public/Animations/about.json'
+import { MdCall,MdOutlineAlternateEmail } from "react-icons/md";
+
 
 const statistics = [
   {
@@ -31,6 +35,28 @@ const services = [
     IMG : './IMG/SEO.jpg',
     text : 'SEO'
   },
+]
+
+ const firstImages = [
+  { image : './IMG/react.jpg'},
+  { image : './IMG/next.jpg'},
+  { image : './IMG/typescript.jpg'},
+  { image : './IMG/redux.jpg'},
+  { image : './IMG/sass.jpg'},
+  { image : './IMG/jest.jpg'},
+]
+ const secondImages = [
+  { image : './IMG/docker.jpg'},
+  { image : './IMG/express.jpg'},
+  { image : './IMG/graphql.png'},
+  { image : './IMG/mongo.jpg'},
+  { image : './IMG/node.jpg'},
+  { image : './IMG/postman.jpg'},
+]
+ const thirdImages = [
+  { image : './IMG/socket.jpg'},
+  { image : './IMG/bootstrap.jpg'},
+  { image : './IMG/tailwind.jpg'},
 ]
 
 
@@ -75,8 +101,70 @@ const Banner = () => {
             ))}
           </div>
         </div>
+
+        <div className="projects">
+          <h3>Projects</h3>
+
+          <div className="firstRow">
+          <div className="project1">
+            <h5>ChatLoom</h5>
+          </div>
+          <div className="project2">
+            <h5>TronPool</h5>
+          </div>
+          </div>
+
+          <div className="secondRow">
+          <div className="project3">
+            <h5>CoRide</h5>
+          </div>
+          <div className="project4">
+            <h5>Animal-Kingdom</h5>
+          </div>
+          <div className="project5">
+            <h5>Catalyst</h5>
+          </div>
+          </div>
+        </div>
+
+        <div className="AboutContainer">
+          <h3>About Me</h3>
+          <div className="about">
+          <Lottie width={'30%'}
+          options={{
+            loop: true,
+              autoplay: true,
+              animationData: about
+            }}/>
+          <div className="iconsContainer">
+            <div className="first">
+              {firstImages.map((image,i)=>(
+              <div className="images" key={i} style={{backgroundImage: `url(${image.image})`}}></div>
+            ))}
+            </div>
+            <div className="first">
+              {secondImages.map((image,i)=>(
+              <div className="images" key={i} style={{backgroundImage: `url(${image.image})`}}></div>
+            ))}
+            </div>
+            <div className="first">
+              {thirdImages.map((image,i)=>(
+              <div className="images" key={i} style={{backgroundImage: `url(${image.image})`}}></div>
+            ))}
+            </div>
+           </div>
+        </div>
+        </div>
+
+        <div className="connectContainer">
+          <h3>Connect With Me</h3>
+          <h2><MdCall className='icon'/> +91 9605155858</h2>
+          <h2><MdOutlineAlternateEmail className='icon'/> shuaibsalam.dev@gmail.com</h2>
+          <h2><IoLogoLinkedin className='icon'/> shuaib-salam</h2>
+          <h2><FaSquareGithub className='icon'/> shhoib</h2>
+        </div>
     </section>
   )
 }
 
-export default Banner
+export default Banner;

@@ -104,7 +104,6 @@ img{
     }
     h5{
         font-size: 1rem;
-        color: black;
         font-weight: 900;
         margin-top: 0.3rem;
     }
@@ -113,8 +112,8 @@ img{
  .servicesContainer{
 
     display: flex;
-    gap: 3vw;
-    margin-top: 5vh;
+    gap: 5vw;
+    margin-top: 7vh;
 
 section{
     display: flex;
@@ -122,8 +121,8 @@ section{
     align-items: center;
     
     .imageContainer{
-        width: 100px;
-        height: 100px;
+        width: 8rem;
+        height: 8rem;
         background-size: cover;
         border-radius: 10px;
     }
@@ -134,3 +133,176 @@ section{
  }
  }
 }
+
+ .projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    margin-top: 11vh;
+    text-align: center;
+    padding-bottom: 15vh;
+
+
+    h3{
+        background: black;
+        padding: 1.5rem 10rem;
+        color: white;
+        font-size: 1.2rem;
+        position: relative;
+        bottom: 5vh;
+    }
+    h5{
+        font-size: 1.4rem;
+        font-weight: 500;
+        // margin-top: 50%;
+        color: white;
+        text-shadow: 3px 3px 6px black;
+    }
+
+ .firstRow{
+    display: flex;
+    gap: 2vw;
+    height: 45vh;
+    margin-top: 5vh;
+
+    .project1{
+        width: 40vw;
+        border-radius: 12px;
+        background-image: url('https://i.pinimg.com/236x/5c/6e/d7/5c6ed77f60a3962915531f29e633382b.jpg');
+        background-size: cover;
+
+        h5{
+            text-shadow: 3px 3px 6px black;
+        }
+    }
+    .project2{
+        width: 30vw;
+        border-radius: 12px;
+        background-image: url('./IMG/tron.png');
+        background-size: cover;
+        h5{
+            text-shadow: 3px 3px 6px rgb(211, 211, 211);
+        }
+    }
+ }
+ .secondRow{
+    display: flex;
+    gap: 1.7vw;
+    margin-top: 2vw;
+    height: 35vh;
+
+    .project3{
+        width: 33vw;
+        border-radius: 12px;
+        background-image: url('./IMG/coride.png');
+        background-size: cover;
+    }
+    .project4{
+        width: 18vw;
+        border-radius: 12px;
+        background-image: url('./IMG/zoo.png');
+        background-size: cover;
+        background-position: -80px;
+
+        h5{
+            text-shadow: 3px 3px 6px rgb(150, 150, 150);
+        }
+    }
+    .project5{
+        width: 18vw;
+        border-radius: 12px;
+        background-image: url('./IMG/catalyst.png');
+        background-size: cover;
+        position: relative
+
+        h5{
+            text-shadow: 3px 3px 6px rgb(212, 212, 212);
+        }   
+    }
+
+}
+  .project1,.project2,.project3,.project4,.project5{
+    box-shadow: 4px 4px 8px rgb(49, 49, 49);
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:hover{
+        cursor: pointer;
+        scale: 1.03;
+    }
+  }
+ }
+
+ .AboutContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8vh;
+
+    h3{
+        background: black;
+        padding: 1.5rem 10rem;
+        color: white;
+        font-size: 1.2rem;
+        position: relative;
+        bottom: 5vh;
+    }
+    .about{
+        display: flex;
+
+    .iconsContainer{
+        width: 60vw;
+
+    .first{
+        display: flex;
+        margin-top: 4vh;
+
+    .images{
+        width: 70px;
+        height: 70px;
+        background-size: cover;
+        background-position: .5px .5px;
+        border-radius: 50%;
+        margin-right: 3.3vw;
+        box-shadow: 3px 3px 8px rgb(92, 92, 92);
+    }
+    }
+    }
+    }
+ }
+
+
+
+ .connectContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+
+    h3{
+        background: black;
+        padding: 1.5rem 10rem;
+        color: white;
+        font-size: 1.2rem;
+        position: relative;
+        bottom: 5vh;
+    }
+    h2{
+        margin-top: 2vh;
+        display: flex;
+        align-items: center;
+        width: 24vw;
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-shadow: 3px 3px 6px var(--accent-color);
+     }
+    .icon{
+        margin-right: 2vw;
+    }
+ }
