@@ -106,22 +106,22 @@ const Banner = () => {
           <h3>Projects</h3>
 
           <div className="firstRow">
-          <div className="project1">
+          <div className="project1" style={{background:`url('./IMG/chatloom.jpeg')`,backgroundSize:'cover'}}>
             <h5>ChatLoom</h5>
           </div>
-          <div className="project2">
+          <div className="project2" style={{background:`url('./IMG/tron.png')`,backgroundSize:'cover'}}>
             <h5>TronPool</h5>
           </div>
           </div>
 
           <div className="secondRow">
-          <div className="project3">
+          <div className="project3" style={{background:`url('./IMG/coride.png')`,backgroundSize:'cover'}}>
             <h5>CoRide</h5>
           </div>
-          <div className="project4">
+          <div className="project4" style={{background:`url('./IMG/zoo.png')`,backgroundSize:'cover'}}>
             <h5>Animal-Kingdom</h5>
           </div>
-          <div className="project5">
+          <div className="project5" style={{background:`url('./IMG/catalyst.png')`,backgroundSize:'cover'}}>
             <h5>Catalyst</h5>
           </div>
           </div>

@@ -328,19 +328,6 @@ section{
             bottom: 3vh;
         }
     }
-    h5{
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: white;
-        text-shadow: 3px 3px 6px black;
-
-        @include fold{
-            font-size: .8rem;
-        }
-        @include mobile{
-            font-size: 1.2rem;
-        }
-    }
 
  .firstRow{
     display: flex;
@@ -358,8 +345,6 @@ section{
     .project1{
         width: 40vw;
         border-radius: 12px;
-        background-image: url('https://i.pinimg.com/236x/5c/6e/d7/5c6ed77f60a3962915531f29e633382b.jpg');
-        background-size: cover;
         
         @include fold{
             width: 50vw;
@@ -368,15 +353,10 @@ section{
             width: 50vw;
         }
 
-        h5{
-            text-shadow: 3px 3px 6px black;
-        }
     }
     .project2{
         width: 30vw;
         border-radius: 12px;
-        background-image: url('./IMG/tron.png');
-        background-size: cover;
 
         @include fold{
          width: 35vw;   
@@ -385,9 +365,6 @@ section{
          width: 35vw;   
         }
 
-        h5{
-            text-shadow: 3px 3px 6px rgb(211, 211, 211);
-        }
     }
  }
  .secondRow{
@@ -406,8 +383,6 @@ section{
     .project3{
         width: 33vw;
         border-radius: 12px;
-        background-image: url('./IMG/coride.png');
-        background-size: cover;
 
         @include mobile{
           width: 38vw;
@@ -419,8 +394,6 @@ section{
     .project4{
         width: 18vw;
         border-radius: 12px;
-        background-image: url('./IMG/zoo.png');
-        background-size: cover;
         background-position: -80px;
 
         @include fold{
@@ -430,15 +403,10 @@ section{
          width: 23vw;
         }
 
-        h5{
-            text-shadow: 3px 3px 6px rgb(150, 150, 150);
-        }
     }
     .project5{
         width: 18vw;
         border-radius: 12px;
-        background-image: url('./IMG/catalyst.png');
-        background-size: cover;
         position: relative;
 
         @include fold{
@@ -447,19 +415,29 @@ section{
         @include mobile{
             width: 22vw;
         }
-
-        h5{
-            text-shadow: 3px 3px 6px rgb(212, 212, 212);
-        }   
+  
     }
 
 }
   .project1,.project2,.project3,.project4,.project5{
     box-shadow: 4px 4px 8px rgb(49, 49, 49);
     transition: 1s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    h5{
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-shadow: 3px 3px 6px var(--accent-color);
+        font-weight: 500;
+        color: white;
+
+        @include fold{
+            font-size: .8rem;
+        }
+        @include mobile{
+            font-size: .8rem;
+        }
+
+    }
 
     &:hover{
         cursor: pointer;
@@ -530,8 +508,8 @@ section{
          height: 40px;
         }
         @include mobile{
-         width: 50px;
-         height: 50px;
+         width: 40px;
+         height: 40px;
         }
     }
     }
