@@ -5,6 +5,7 @@ import { FaSquareGithub } from "react-icons/fa6";
 import Lottie from 'react-lottie';
 import about from '../../../public/Animations/about.json'
 import { MdCall,MdOutlineAlternateEmail } from "react-icons/md";
+import {motion} from 'framer-motion'
 
 
 const statistics = [
@@ -64,9 +65,9 @@ const Banner = () => {
   return (
     <section>
         <div className="bannerContainer">
-            <div className="textContainer">
+            <motion.div className="textContainer" initial={{x:'-150%'}} animate={{x:0}} transition={{type: "spring",damping: 10,delay:'0.5'}}>
                 <h3>MERN Stack Developer</h3>
-                <h1>Hello! I'm <br /> <span>Shuaib </span>Salam</h1>
+                <motion.h1 initial={{x:'-150%'}} animate={{x:0}} transition={{type: "spring",damping: 9,delay:'0.8'}}>Hello! I'm <br /> <span>Shuaib </span>Salam</motion.h1>
                 <h6>As a MERN stack developer, I leverage my expertise in React.js,Next.js ,MongoDB, Express.js and Node.js to craft robust and scalable web applications that meet the needs of modern businesses.</h6>
                 <button>Lets Talk <GoArrowUpRight/></button>
                 <div className="socialContainer">
@@ -75,15 +76,15 @@ const Banner = () => {
                     <a href="https://www.linkedin.com/in/shuaib-salam/"> <IoLogoLinkedin/></a>
                      <a href="https://github.com/shhoib"><FaSquareGithub/></a>  
                 </div>
-            </div>
+            </motion.div>
         <img src="./IMG/shuaibIMG.png" alt="" />
         </div>
 
         <div className="IDOsection">
-          <h2>Best Services</h2>
-          <h1>WHAT CAN I DO FOR YOU</h1>
-          <h6>I offer expertise in building dynamic and responsive web applications using the MERN stack, ensuring seamless user experiences and scalable solutions tailored to meet your specific business needs</h6>  
-          <div className="numberContainer">
+          <motion.h2 initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:.2}}>Best Services</motion.h2>
+          <motion.h1 initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:.4}}>WHAT CAN I DO FOR YOU</motion.h1>
+          <motion.h6 initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:.6}}>I offer expertise in building dynamic and responsive web applications using the MERN stack, ensuring seamless user experiences and scalable solutions tailored to meet your specific business needs</motion.h6>  
+          <motion.div className="numberContainer" initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:.8}}>
             { statistics.map((value,i)=>(
               <div key={i}>
                 <h1>{value.number}<span>+</span></h1>
@@ -91,11 +92,12 @@ const Banner = () => {
               </div>
             ))
             }
-          </div>
+          </motion.div>
           <div className="servicesContainer">
             {services.map((value,i)=>(
               <section key={i}>
-              <div className="imageContainer" style={{backgroundImage: `url(${value.IMG})`}}></div>
+              <motion.div className="imageContainer" initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:1, duration:4}}
+              style={{backgroundImage: `url(${value.IMG})`}}></motion.div>
               <h3>{value.text}</h3>
               </section>
             ))}
@@ -106,24 +108,29 @@ const Banner = () => {
           <h3>Projects</h3>
 
           <div className="firstRow">
-          <div className="project1" style={{background:`url('./IMG/chatloom.jpeg')`,backgroundSize:'cover'}}>
+          <motion.div className="project1" initial={{x:'-120%'}} whileInView={{x:0}}
+             style={{background:`url('./IMG/chatloom.jpeg')`,backgroundSize:'cover'}}>
             <h5>ChatLoom</h5>
-          </div>
-          <div className="project2" style={{background:`url('./IMG/tron.png')`,backgroundSize:'cover'}}>
+          </motion.div>
+          <motion.div className="project2" initial={{x:'120%',y:'90%'}} whileInView={{x:0,y:0}}
+             style={{background:`url('./IMG/tron.png')`,backgroundSize:'cover'}}>
             <h5>TronPool</h5>
-          </div>
+          </motion.div>
           </div>
 
           <div className="secondRow">
-          <div className="project3" style={{background:`url('./IMG/coride.png')`,backgroundSize:'cover'}}>
+          <motion.div className="project3" initial={{x:'-100%'}} whileInView={{x:0}}
+             style={{background:`url('./IMG/coride.png')`,backgroundSize:'cover'}}>
             <h5>CoRide</h5>
-          </div>
-          <div className="project4" style={{background:`url('./IMG/zoo.png')`,backgroundSize:'cover'}}>
+          </motion.div>
+          <motion.div className="project4" initial={{y:'-150%'}} whileInView={{y:0}}
+            style={{background:`url('./IMG/zoo.png')`,backgroundSize:'cover'}}>
             <h5>Animal-Kingdom</h5>
-          </div>
-          <div className="project5" style={{background:`url('./IMG/catalyst.png')`,backgroundSize:'cover'}}>
+          </motion.div>
+          <motion.div className="project5"  initial={{x:'100%'}} whileInView={{x:0}} transition={{type:'spring',damping:'1'}}
+          style={{background:`url('./IMG/catalyst.png')`,backgroundSize:'cover'}}>
             <h5>Catalyst</h5>
-          </div>
+          </motion.div>
           </div>
         </div>
 
@@ -136,32 +143,37 @@ const Banner = () => {
               autoplay: true,
               animationData: about
             }}/>
+
           <div className="iconsContainer">
-            <div className="first">
+            <motion.div className="first" initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:3}}>
               {firstImages.map((image,i)=>(
               <div className="images" key={i} style={{backgroundImage: `url(${image.image})`}}></div>
             ))}
-            </div>
-            <div className="first">
+            </motion.div>
+
+            <motion.div className="first" initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:4,delay:1}}>
               {secondImages.map((image,i)=>(
               <div className="images" key={i} style={{backgroundImage: `url(${image.image})`}}></div>
             ))}
-            </div>
-            <div className="first">
+            </motion.div>
+
+            <motion.div className="first" initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:5,delay:2}}>
               {thirdImages.map((image,i)=>(
               <div className="images" key={i} style={{backgroundImage: `url(${image.image})`}}></div>
             ))}
-            </div>
+            </motion.div>
            </div>
         </div>
         </div>
 
         <div className="connectContainer">
           <h3>Connect With Me</h3>
-          <h2><MdCall className='icon'/> +91 9605155858</h2>
-          <h2><MdOutlineAlternateEmail className='icon'/> shuaibsalam.dev@gmail.com</h2>
-          <h2><IoLogoLinkedin className='icon'/> shuaib-salam</h2>
-          <h2><FaSquareGithub className='icon'/> shhoib</h2>
+          <div className="connect">
+           <h2><MdCall className='icon'/> +91 9605155858</h2>
+           <h2><MdOutlineAlternateEmail className='icon'/> shuaibsalam.dev@gmail.com</h2>
+           <h2><IoLogoLinkedin className='icon'/> shuaib-salam</h2>
+           <h2><FaSquareGithub className='icon'/> shhoib</h2>
+          </div>
         </div>
     </section>
   )

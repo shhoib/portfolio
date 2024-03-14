@@ -485,9 +485,15 @@ section{
 
         @include fold{
          width: 95vw;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
         }
         @include mobile{
          width: 95vw;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
         }
 
     .first{
@@ -542,25 +548,50 @@ section{
             padding: 1.3rem 4rem;
         }
     }
-    h2{
-        margin-top: 2vh;
+    
+    .connect{
         display: flex;
         align-items: center;
-        width: 24vw;
+        justify-content: center;
+        // flex-direction: column;
+
+        @include fold{
+            flex-direction: column;
+        }
+        @include mobile{
+            flex-direction: column;
+        }
+    
+    h2{
+        margin: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-weight: 400;
         font-size: 1.3rem;
         text-shadow: 3px 3px 6px var(--accent-color);
+        text-align: center;
 
         @include fold{
             width: 80vw;
             font-size: 1rem;
+            margin: 3vh;
         }
         @include mobile{
             width: 80vw;
             font-size: 1rem;
+            margin: 3vh;
         }
      }
     .icon{
-        margin-right: 2vw;
+        margin-right: .5vw;
+
+        @include fold{
+            margin-right: 2vw;
+        }
+        @include mobile{
+            margin-right: 2vw;
+        }
     }
  }
+}
