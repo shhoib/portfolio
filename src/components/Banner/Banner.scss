@@ -300,6 +300,7 @@ section{
     margin-top: 11vh;
     text-align: center;
     padding-bottom: 15vh;
+    overflow: hidden;
 
     @include fold{
         margin-top: 8vh;   
@@ -314,8 +315,9 @@ section{
         padding: 1.5rem 10rem;
         color: white;
         font-size: 1.2rem;
-        position: relative;
-        bottom: 5vh;
+        // position: relative;
+        // bottom: 5vh;
+        margin: 3vh 0;
 
         @include fold{
             padding: 1.2rem 4.5rem;

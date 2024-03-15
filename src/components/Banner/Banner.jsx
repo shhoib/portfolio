@@ -62,6 +62,20 @@ const services = [
 
 
 const Banner = () => {
+
+  const openChatLink = () => {
+    window.open('https://chatloom.netlify.app/', '_blank');
+  };
+  const opentronLink = () => {
+    window.open('https://testbotbet.netlify.app/', '_blank');
+  };
+  const openZooLink = () => {
+    window.open('https://animal-kingdom1.netlify.app', '_blank');
+  };
+  const opencatalystLink = () => {
+    window.open('https://curious-pudding-82f623.netlify.app', '_blank');
+  };
+
   return (
     <section>
         <div className="bannerContainer">
@@ -108,27 +122,27 @@ const Banner = () => {
           <h3>Projects</h3>
 
           <div className="firstRow">
-          <motion.div className="project1" initial={{x:'-120%'}} whileInView={{x:0}}
+          <motion.div className="project1" initial={{x:'-100%'}} whileInView={{x:0}} onClick={openChatLink}
              style={{background:`url('./IMG/chatloom.jpeg')`,backgroundSize:'cover'}}>
             <h5>ChatLoom</h5>
           </motion.div>
-          <motion.div className="project2" initial={{x:'120%',y:'90%'}} whileInView={{x:0,y:0}}
+          <motion.div className="project2" initial={{x:'100%',y:'100%'}} whileInView={{x:0,y:0}} onClick={opentronLink}
              style={{background:`url('./IMG/tron.png')`,backgroundSize:'cover'}}>
             <h5>TronPool</h5>
           </motion.div>
           </div>
 
           <div className="secondRow">
-          <motion.div className="project3" initial={{x:'-100%'}} whileInView={{x:0}}
+          <motion.div className="project3" initial={{x:'-100%'}} whileInView={{x:0}} 
              style={{background:`url('./IMG/coride.png')`,backgroundSize:'cover'}}>
             <h5>CoRide</h5>
           </motion.div>
-          <motion.div className="project4" initial={{y:'-150%'}} whileInView={{y:0}}
+          <motion.div className="project4" initial={{y:'-100%'}} whileInView={{y:0}} onClick={openZooLink}
             style={{background:`url('./IMG/zoo.png')`,backgroundSize:'cover'}}>
             <h5>Animal-Kingdom</h5>
           </motion.div>
-          <motion.div className="project5"  initial={{x:'100%'}} whileInView={{x:0}} transition={{type:'spring',damping:'1'}}
-          style={{background:`url('./IMG/catalyst.png')`,backgroundSize:'cover'}}>
+          <motion.div className="project5"  initial={{x:'100%'}} whileInView={{x:0}}
+          style={{background:`url('./IMG/catalyst.png')`,backgroundSize:'cover'}} onClick={opencatalystLink}> 
             <h5>Catalyst</h5>
           </motion.div>
           </div>
@@ -169,7 +183,7 @@ const Banner = () => {
         <div className="connectContainer">
           <h3>Connect With Me</h3>
           <div className="connect">
-           <h2><MdCall className='icon'/> +91 9605155858</h2>
+           <motion.h2 intitial={{opacity:0}} whileInView={{opacity:1}}><MdCall className='icon'/> +91 9605155858</motion.h2>
            <h2><MdOutlineAlternateEmail className='icon'/> shuaibsalam.dev@gmail.com</h2>
            <h2><IoLogoLinkedin className='icon'/> shuaib-salam</h2>
            <h2><FaSquareGithub className='icon'/> shhoib</h2>
